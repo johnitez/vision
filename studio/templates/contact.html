@@ -1,0 +1,251 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Third Vision Studios">
+    <meta name="keywords" content="Third Vision Studios, unica, creative, html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Third Vision Studios KE</title>
+
+    <!-- Favicon -->
+    <link href="{% static 'laban/img/favicon1.ico' %}" rel="icon">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Quantico:400,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap" rel="stylesheet">
+
+    <!-- Css Styles -->
+    <link rel="stylesheet" href="{% static 'laban/css/bootstrap.min.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'laban/css/font-awesome.min.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'laban/css/elegant-icons.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'laban/css/owl.carousel.min.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'laban/css/magnific-popup.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'laban/css/slicknav.min.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'laban/css/style3.1.css' %}" type="text/css">
+</head>
+
+<body>
+    <!-- Page Preloder -->
+    <div class="loader">
+        <span>{</span><span>}</span>
+    </div>
+    <!-- Header Section Begin -->
+    <header class="header-section header-normal">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="logo">
+                        <a href="./index.html">
+                            <img src="{% static 'laban/img/logo6.png' %}" alt="">
+                        </a>
+                        <br/>
+                        <a href="./index.html">
+                            <img src="{% static 'laban/img/' %}" alt="">
+                        </a>
+                    </div>
+                    <nav class="nav-menu mobile-menu">
+                        <ul>
+                            <li><a href="./index.html">Home</a></li>
+                            <li><a href="./about.html">About</a></li>
+                            <li><a href="./services.html">Services</a></li>
+                            <li><a href="./pricing.html">Pricing</a></li>
+                            <li><a href="./video.html">Videos</a></li>
+                            <li><a href="./gallery.html">Gallery</a></li>
+                            <li><a href="./appointment.html">Appointment</a></li>
+                            
+                            </li>
+                            <li class="active"><a href="./contact.html">Contact</a></li>
+                        </ul>
+                    </nav>
+                    <div class="top-search search-switch">
+                        <i class="fa fa-search"></i>
+                    </div>
+                    <div id="mobile-menu-wrap"></div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Header End -->
+<br/><br/><br/>
+    {% if your_name %}
+<center>
+    <h2>Thanks {{ your_name }}!</h2>
+    <p>We received your email and will respond shortly</p>
+</center>
+<br/><br/><br/>
+{% else %}
+
+    <!-- Contact Section Begin -->
+        <div class='header-section'>
+            <h1><center>Get Quote</center></h1>
+        </div>
+    <br/>
+    <section style="background-color:  #bfad2d;" class="contact-section spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-6">
+                    <div class="contact-text">
+                        <h3>Get in touch</h3>
+                        <p></p>
+                        <div class="ct-item">
+                            <div class="ct-icon">
+                                <i class="fa fa-map-marker"></i>
+                            </div>
+                            <div class="ct-text">
+                                <h5>Address</h5>
+                                <p>2nd floor room 210, AIM College Building, Kiangararu,Karatina, </p>
+                            </div>
+                        </div>
+                        <div class="ct-item">
+                            <div class="ct-icon">
+                                <i class="fa fa-mobile"></i>
+                            </div>
+                            <div class="ct-text">
+                                <h5>Phone</h5>
+                                <ul>
+                                    
+                                    <li>07 05 314 684</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="ct-item">
+                            <div class="ct-icon">
+                                <i class="fa fa-envelope"></i>
+                            </div>
+                            <div class="ct-text">
+                                <h5>Email</h5>
+                                <p>director.laban@ gmail.com</p>
+                                <p>willylaban@ gmail.com</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6">
+                    <div class="contact-form">
+                        <h3>Work with Me!</h3>
+                        <form action="{% url 'contact' %}" method="POST">
+                        {% csrf_token %}
+                            <input name='your-name' type="text" placeholder="Name" required>
+                            <input name='your-email' type="text" placeholder="Email">
+                            <input name='message-service' type="text" placeholder="Service" required>
+                            <textarea name='your-message' placeholder="Phone Number" required></textarea>
+                            <button class="btn btn-dark w-40 py-3" type="submit">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Contact Section End -->
+
+    <!--map-->
+     <div class="map">
+        <iframe
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.6758754747834!2d37.12923917496464!3d-0.484156499511097!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x18288710d410a6b9%3A0x2b224403c2b9e2d0!2sThird%20Vision%20Studios%20KE!5e0!3m2!1sen!2ske!4v1693425763465!5m2!1sen!2ske" width="600" height="650" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            
+    </div>
+    <!--endmap-->
+
+{% endif %}
+
+    <footer class="footer-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="fs-about">
+                        <div class="fa-logo">
+                            <a href="#">
+                                <img src="{% static 'laban/img/till2.png' %}" alt="">
+                            </a>
+                        </div>
+                        <p>Contact us now and let us crown your event with greatness.</p>
+                        <div class="fa-social">
+                            <a href="https://web.facebook.com/ThirdVisionStudios"><i class="fa fa-facebook"></i></a>                                
+                            <a href="https://www.youtube.com/@thirdvisionstudios2664"><i class="fa fa-youtube-play"></i></a>
+                            <a href="https://instagram.com/thirdvision_studios?igshid=MzRlODBiNWFlZA=="><i class="fa fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="fs-widget">
+                        <h5>Latest</h5>
+                        <div class="fw-instagram">
+                            <img src="{% static 'laban/img/instagram/latest 1.jpg' %}" alt="">
+                            <img src="{% static 'laban/img/instagram/latest 2.jpg' %}" alt="">
+                            <img src="{% static 'laban/img/instagram/latest 3.jpg' %}" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="fs-widget">
+                        <h5>Quick links</h5>
+                        <ul>
+                            <li><a href="/index.html">Home</a></li>
+                            <li><a href="/about.html">About</a></li>
+                            <li><a href="/contact.html">Contact</a></li>
+                        </ul>
+                        <ul>
+                            <li><a href="/gallery.html">Gallery</a></li>
+                            
+                            <li><a href="/services.html">Services</a></li>
+                            <li><a href="./appointment.html">Appointment</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="fs-widget">
+                        <h5>Subscribe</h5>
+                        <p></p>
+                        <div class="fw-subscribe">
+                            <form action="{% url 'contact' %}" method="POST">
+                                {% csrf_token %}
+                                <input type="text" placeholder="Email">
+                                <button type="submit"><i class="fa fa-send"></i></button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6">
+                   <div class="left-btn">
+                        <a href="/downloadfile.html" class="primary-btn">Get Our Catalogue PDF</a>
+                    </div>
+                </div>
+                <div class="col-lg-12">
+                    <div class="copyright-text">
+                        
+  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved by Third Visions Studio<br/>Website Created by John Mwangi
+  
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer Section End -->
+
+    <!-- Search model Begin -->
+    <div class="search-model">
+        <div class="h-100 d-flex align-items-center justify-content-center">
+            <div class="search-close-switch">+</div>
+            <form class="search-model-form">
+                <input type="text" id="search-input" placeholder="Search here.....">
+            </form>
+        </div>
+    </div>
+    <!-- Search model end -->
+
+    <!-- Js Plugins -->
+    <script src="{% static 'laban/js/jquery-3.3.1.min.js' %}"></script>
+    <script src="{% static 'laban/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'laban/js/jquery.magnific-popup.min.js' %}"></script>
+    <script src="{% static 'laban/js/isotope.pkgd.min.js' %}"></script>
+    <script src="{% static 'laban/js/masonry.pkgd.min.js' %}"></script>
+    <script src="{% static 'laban/js/jquery.slicknav.js' %}"></script>
+    <script src="{% static 'laban/js/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'laban/js/main.js' %}"></script>
+</body>
+
+</html>
+
