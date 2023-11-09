@@ -19,7 +19,6 @@ pefile==2023.2.7
 Pillow==10.0.0
 platformdirs==3.9.1
 psycopg2==2.9.7
-pyinstaller @ https://github.com/pyinstaller/pyinstaller/archive/develop.zip#sha256=09de102bcd5a3803885217edb2093155b2727c82d3106808d58ab38d2c3e944a
 pyinstaller-hooks-contrib==2023.8
 python-dateutil==2.8.2
 python-decouple==3.8
